@@ -1,0 +1,6 @@
+use_frameworks!
+target 'WTUIColorExtensions_Tests' do
+  pod 'WTUIColorExtensions', :path => '../'
+  
+  
+end
