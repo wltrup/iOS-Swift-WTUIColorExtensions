@@ -1,0 +1,22 @@
+{
+  "name": "WTUIColorExtensions",
+  "version": "0.1.0",
+  "summary": "A short description of WTUIColorExtensions.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/WTUIColorExtensions",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Wagner Truppel": "trupwl@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/WTUIColorExtensions.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "WTUIColorExtensions/Classes/**/*"
+}

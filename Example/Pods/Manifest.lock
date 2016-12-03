@@ -1,0 +1,16 @@
+PODS:
+  - WTUIColorExtensions (0.1.0)
+
+DEPENDENCIES:
+  - WTUIColorExtensions (from `../`)
+
+EXTERNAL SOURCES:
+  WTUIColorExtensions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WTUIColorExtensions: ef8f29c8331fc6d737d17b0858a634080cf7346f
+
+PODFILE CHECKSUM: 735cc16907814f7baacc313c637dac7ea2e2ab2f
+
+COCOAPODS: 1.1.1
