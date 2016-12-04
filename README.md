@@ -7,7 +7,7 @@
 
 ## What
 
-**WTUIColorExtensions** adds to `UIColor` the ability  to generate pseudo-random color instances
+**WTUIColorExtensions** adds to `UIColor` the ability to generate pseudo-random color instances
 and methods to extract color components in a more direct way than using `inout` arguments and
 the default `get...` methods. Here's the full set of API additions:
 
