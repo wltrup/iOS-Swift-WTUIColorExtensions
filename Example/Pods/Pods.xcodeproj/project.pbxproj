@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0711813D3CD5380F7C12475357D80949 /* WTUIColorExtensions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73107EB40363AFBC711F10299A601CDF /* WTUIColorExtensions-dummy.m */; };
 		18F11270335D0651012ACC28B6B23BAE /* Pods-WTUIColorExtensions_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED6C44ECBBB1C3A07E8B48F17015FEE5 /* Pods-WTUIColorExtensions_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		510640E7A98154C796826123AF79FDE4 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B401E59E2872DB59D292CB681F6383 /* ReplaceMe.swift */; };
+		3220A09A7EBE51DFDA861E829BCD9AE3 /* WTUIColorExtensions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73107EB40363AFBC711F10299A601CDF /* WTUIColorExtensions-dummy.m */; };
 		69EE5099B2EA3A8272B748C778ED709A /* Pods-WTUIColorExtensions_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 722964344E9BB7CA05FE19C9093B50A5 /* Pods-WTUIColorExtensions_Tests-dummy.m */; };
 		76B02A9D29F44365009CCA91281995A9 /* WTUIColorExtensions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C2F68D774246EF81B579984DA2AADB5 /* WTUIColorExtensions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9437DD14F9B5F149EB8E333FCC30020C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		BBB44298D5392398DB8148E2A172FDE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		E07B7FE902E35CCC24C68DFF9621FDEE /* WTUIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F17F3A402EB56768A074C48DED3B3 /* WTUIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,24 +27,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06B610064981F8200C7C5189CDABCA28 /* Pods-WTUIColorExtensions_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WTUIColorExtensions_Tests.modulemap"; sourceTree = "<group>"; };
+		06B610064981F8200C7C5189CDABCA28 /* Pods-WTUIColorExtensions_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WTUIColorExtensions_Tests.modulemap"; sourceTree = "<group>"; };
 		297430B1C529D1E41EB6926361C92829 /* Pods-WTUIColorExtensions_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTUIColorExtensions_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2DFE3D36A97679221F65681F0FCDA54A /* Pods-WTUIColorExtensions_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTUIColorExtensions_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4CC6171D474161E2232132A7EB1D1132 /* WTUIColorExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WTUIColorExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		463F17F3A402EB56768A074C48DED3B3 /* WTUIColorExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WTUIColorExtensions.swift; sourceTree = "<group>"; };
+		4CC6171D474161E2232132A7EB1D1132 /* WTUIColorExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WTUIColorExtensions.framework; path = WTUIColorExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570B5F6A275F8D4E04E861A0544224B8 /* Pods-WTUIColorExtensions_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTUIColorExtensions_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5B0932FC7B8D856169025C1E28D8B13E /* Pods_WTUIColorExtensions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTUIColorExtensions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B0932FC7B8D856169025C1E28D8B13E /* Pods_WTUIColorExtensions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WTUIColorExtensions_Tests.framework; path = "Pods-WTUIColorExtensions_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2F68D774246EF81B579984DA2AADB5 /* WTUIColorExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTUIColorExtensions-umbrella.h"; sourceTree = "<group>"; };
 		65E69ABAA231F2222B42DFA136DF6D3A /* Pods-WTUIColorExtensions_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WTUIColorExtensions_Tests-resources.sh"; sourceTree = "<group>"; };
 		722964344E9BB7CA05FE19C9093B50A5 /* Pods-WTUIColorExtensions_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTUIColorExtensions_Tests-dummy.m"; sourceTree = "<group>"; };
 		73107EB40363AFBC711F10299A601CDF /* WTUIColorExtensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WTUIColorExtensions-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94F8F64FE3C74A3AFF8EF1B369F9BB50 /* WTUIColorExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WTUIColorExtensions.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94F8F64FE3C74A3AFF8EF1B369F9BB50 /* WTUIColorExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = WTUIColorExtensions.modulemap; sourceTree = "<group>"; };
 		A4A6215CDC1944C1D466C0ED83D1DBBE /* Pods-WTUIColorExtensions_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WTUIColorExtensions_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		A58F69BF98EFD9D21578024982B31D59 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBDF88097F85286EC0C6443A04B75EC1 /* Pods-WTUIColorExtensions_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTUIColorExtensions_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D033655AED76CAB2EBABB0D27B22FC7D /* WTUIColorExtensions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTUIColorExtensions.xcconfig; sourceTree = "<group>"; };
-		D4B401E59E2872DB59D292CB681F6383 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		D64B2395FFADA3ECD5FA7558A6D75A66 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED6C44ECBBB1C3A07E8B48F17015FEE5 /* Pods-WTUIColorExtensions_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WTUIColorExtensions_Tests-umbrella.h"; sourceTree = "<group>"; };
 		FA6A26540EB8A7137F4DD33054213573 /* WTUIColorExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTUIColorExtensions-prefix.pch"; sourceTree = "<group>"; };
@@ -73,8 +73,9 @@
 		1A24EB78610366C412631A443F1AE99A /* WTUIColorExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				52193DFC9894FDB29B1B5684FB4E9897 /* Classes */,
+				4BDCEC7EF4BFBF058C7D4163BE974482 /* Classes */,
 			);
+			name = WTUIColorExtensions;
 			path = WTUIColorExtensions;
 			sourceTree = "<group>";
 		};
@@ -86,11 +87,12 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		52193DFC9894FDB29B1B5684FB4E9897 /* Classes */ = {
+		4BDCEC7EF4BFBF058C7D4163BE974482 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D4B401E59E2872DB59D292CB681F6383 /* ReplaceMe.swift */,
+				463F17F3A402EB56768A074C48DED3B3 /* WTUIColorExtensions.swift */,
 			);
+			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -224,7 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0F19B3A4BF8E409CD90D46AC7C37D47 /* Build configuration list for PBXNativeTarget "WTUIColorExtensions" */;
 			buildPhases = (
-				E1EBA53EF387BB471B5437D0B24E835D /* Sources */,
+				C72F02113692FB29B50BF30D5F85D898 /* Sources */,
 				382D8811B35B4F09E14AEF355900A26B /* Frameworks */,
 				AD085A1D3BC2BDF8F0CC31636CD3788D /* Headers */,
 			);
@@ -245,14 +247,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					5B4943AC34DE53E2753E51AF880E8141 = {
-						LastSwiftMigration = 0810;
-					};
-					F0667B17DFA6B62CA5423FC98A15804E = {
-						LastSwiftMigration = 0810;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -281,12 +275,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1EBA53EF387BB471B5437D0B24E835D /* Sources */ = {
+		C72F02113692FB29B50BF30D5F85D898 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				510640E7A98154C796826123AF79FDE4 /* ReplaceMe.swift in Sources */,
-				0711813D3CD5380F7C12475357D80949 /* WTUIColorExtensions-dummy.m in Sources */,
+				3220A09A7EBE51DFDA861E829BCD9AE3 /* WTUIColorExtensions-dummy.m in Sources */,
+				E07B7FE902E35CCC24C68DFF9621FDEE /* WTUIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +326,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -368,12 +361,44 @@
 				PRODUCT_NAME = Pods_WTUIColorExtensions_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		7EE6EE93789CFC499F5B34BF6C1981CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D033655AED76CAB2EBABB0D27B22FC7D /* WTUIColorExtensions.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/WTUIColorExtensions/WTUIColorExtensions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WTUIColorExtensions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WTUIColorExtensions/WTUIColorExtensions.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = WTUIColorExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -459,40 +484,7 @@
 			};
 			name = Debug;
 		};
-		A1E444710EB587656E7BED2381284E56 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D033655AED76CAB2EBABB0D27B22FC7D /* WTUIColorExtensions.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/WTUIColorExtensions/WTUIColorExtensions-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/WTUIColorExtensions/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/WTUIColorExtensions/WTUIColorExtensions.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = WTUIColorExtensions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A6CA06419A41DE5E475456807793908B /* Release */ = {
+		BB9B9ADD2B7F86E8F5E88FA47C071F05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D033655AED76CAB2EBABB0D27B22FC7D /* WTUIColorExtensions.xcconfig */;
 			buildSettings = {
@@ -548,8 +540,8 @@
 		B0F19B3A4BF8E409CD90D46AC7C37D47 /* Build configuration list for PBXNativeTarget "WTUIColorExtensions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1E444710EB587656E7BED2381284E56 /* Debug */,
-				A6CA06419A41DE5E475456807793908B /* Release */,
+				7EE6EE93789CFC499F5B34BF6C1981CF /* Debug */,
+				BB9B9ADD2B7F86E8F5E88FA47C071F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
