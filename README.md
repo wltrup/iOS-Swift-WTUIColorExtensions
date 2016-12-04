@@ -7,10 +7,9 @@
 
 ## What
 
-**WTUIColorExtensions** adds to `UIColor` the ability to generate pseudo-random color instances,
-given their RGBA, HSBA, or white/alpha components, as well as methods to extract those color
-components in a more direct way than using `inout` arguments and the default `get...` methods.
-Here's the full set of API additions:
+**WTUIColorExtensions** adds to `UIColor` the ability to generate pseudo-random color instances
+and methods to extract color components in a more direct way than using `inout` arguments and
+the default `get...` methods. Here's the full set of API additions:
 
 ```swift
     public static var randomRGB: UIColor { get }
