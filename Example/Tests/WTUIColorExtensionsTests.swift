@@ -31,7 +31,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
     func test_randomRGB()
     {
         N = 10_000
-        tolerance = 1e-2
+        tolerance = 1e-1
 
         let colors = (1...N)
             .map { _ in try! UIColor.randomRGB.rgbaComponents() }
@@ -66,7 +66,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
     func test_randomRGBA()
     {
         N = 10_000
-        tolerance = 1e-2
+        tolerance = 1e-1
 
         let colors = (1...N)
             .map { _ in try! UIColor.randomRGBA.rgbaComponents() }
@@ -104,7 +104,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
     func test_randomHSB()
     {
         N = 10_000
-        tolerance = 1e-2
+        tolerance = 1e-1
 
         let colors = (1...N)
             .map { _ in try! UIColor.randomHSB.hsbaComponents() }
@@ -139,7 +139,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
     func test_randomHSBA()
     {
         N = 10_000
-        tolerance = 1e-2
+        tolerance = 1e-1
 
         let colors = (1...N)
             .map { _ in try! UIColor.randomHSBA.hsbaComponents() }
@@ -175,7 +175,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
     func test_randomWhite()
     {
         N = 10_000
-        tolerance = 1e-2
+        tolerance = 1e-1
 
         let whites = (1...N)
             .map { _ in try! UIColor.randomWhite.whiteAlphaComponents().white }
@@ -201,7 +201,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
     func test_randomWhiteAlpha()
     {
         N = 10_000
-        tolerance = 1e-2
+        tolerance = 1e-1
 
         let colors = (1...N)
             .map { _ in try! UIColor.randomWhiteAlpha.whiteAlphaComponents() }
