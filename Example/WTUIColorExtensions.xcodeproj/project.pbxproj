@@ -14,6 +14,7 @@
 
 /* Begin PBXFileReference section */
 		33D27859767258CCB06AFAA9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		3B7C316D1DF547B2008D4CD3 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		3BC0BA251DF2CC9400DE8C93 /* WTUIColorExtensionsTestsBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTUIColorExtensionsTestsBase.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* WTUIColorExtensions_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTUIColorExtensions_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 			children = (
 				7DA7AE2316C467F452B63D38 /* WTUIColorExtensions.podspec */,
 				BD2A31BA997B119E206E03FD /* README.md */,
+				3B7C316D1DF547B2008D4CD3 /* CHANGELOG.md */,
 				33D27859767258CCB06AFAA9 /* LICENSE */,
 			);
 			name = "Podspec Metadata";

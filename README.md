@@ -61,6 +61,11 @@ don't actually `throw` any invalid color space errors on iOS, although in theory
 In order to future-proof this library, I've assumed that those methods might fail but I can't
 currently test that code path.
 
+## Changelog
+
+Changes to **WTUIColorExtensions** are listed
+[here](https://github.com/wltrup/iOS-Swift-WTUIColorExtensions/blob/master/CHANGELOG.md).
+
 ## Installation
 
 **WTUIColorExtensions** is available through [CocoaPods](http://cocoapods.org). To install
