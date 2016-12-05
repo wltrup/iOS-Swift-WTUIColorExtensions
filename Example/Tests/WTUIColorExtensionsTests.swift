@@ -30,7 +30,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
 
     func test_randomRGB()
     {
-        N = 100_000
+        N = 10_000
         tolerance = 1e-2
 
         let colors = (1...N)
@@ -65,7 +65,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
 
     func test_randomRGBA()
     {
-        N = 100_000
+        N = 10_000
         tolerance = 1e-2
 
         let colors = (1...N)
@@ -103,7 +103,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
 
     func test_randomHSB()
     {
-        N = 100_000
+        N = 10_000
         tolerance = 1e-2
 
         let colors = (1...N)
@@ -138,7 +138,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
 
     func test_randomHSBA()
     {
-        N = 100_000
+        N = 10_000
         tolerance = 1e-2
 
         let colors = (1...N)
@@ -174,7 +174,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
 
     func test_randomWhite()
     {
-        N = 100_000
+        N = 10_000
         tolerance = 1e-2
 
         let whites = (1...N)
@@ -200,7 +200,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
 
     func test_randomWhiteAlpha()
     {
-        N = 100_000
+        N = 10_000
         tolerance = 1e-2
 
         let colors = (1...N)
