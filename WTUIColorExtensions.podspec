@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WTUIColorExtensions'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'WTUIColorExtensions adds methods to generate pseudo-random colors, and more.'
   s.description      = <<-DESC
     WTUIColorExtensions adds methods to generate pseudo-random colors and methods to
