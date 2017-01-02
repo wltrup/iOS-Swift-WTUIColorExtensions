@@ -46,6 +46,18 @@ the default `get...` methods. Here's the full set of API additions:
         public let alpha: CGFloat
     }
     public func whiteAlphaComponents() throws -> WhiteAlphaComponents
+
+    // NEW in v. 1.0.3
+    public func hexValue() throws -> String
+    public func hexValueWithAlpha() throws -> String
+
+    // NEW in v. 1.0.3
+    public static func quadraticLuma(red: CGFloat, green: CGFloat, blue: CGFloat) throws -> CGFloat
+    public func quadraticLuma() throws -> CGFloat
+
+    // NEW in v. 1.0.3
+    public func contrastingColor(continuous: Bool, threshold: CGFloat, sameAlpha: Bool) throws -> UIColor
+}
 ```
 
 ## Why
@@ -55,7 +67,7 @@ arguments to extract color components is annoying.
 
 ## Tests
 
-**WTUIColorExtensions** adds 9 extensions, all tested by 21 tests with over 95% coverage.
+**WTUIColorExtensions** adds several extensions, all tested by 26 tests with nearly 95% coverage.
 The missing 5% test-coverage is due to the fact that `rgbaComponents()` and `hsbaComponents()`
 don't actually `throw` any invalid color space errors on iOS, although in theory they could.
 In order to future-proof this library, I've assumed that those methods might fail but I can't

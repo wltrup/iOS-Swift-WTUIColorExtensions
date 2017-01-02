@@ -191,9 +191,9 @@ public extension UIColor
     {
         case invalidColorSpace
     }
-    
+
     // MARK: -
-    
+
     /// A struct to store the RGBA components of a `UIColor` instance.
     public struct RGBAComponents
     {
@@ -260,21 +260,161 @@ public extension UIColor
     ///
     /// - Returns: the white and alpha components of `self`.
     ///
-    /// - Throws: `ColorError.invalidColorSpace` if `self`
-    ///           is made up of different values for its RGB components,
-    ///           which would make a grayscale assignment impossible.
+    /// - Throws: `ColorError.invalidColorSpace` if somehow
+    ///           the white and alpha components can't be extracted from `self` (this
+    ///           should never happen on iOS but...)
     public func whiteAlphaComponents() throws -> WhiteAlphaComponents
     {
-        let rgbaComps = try! rgbaComponents()
-        guard rgbaComps.red == rgbaComps.green && rgbaComps.red == rgbaComps.blue else {
-            throw ColorError.invalidColorSpace
-        }
-
         var w: CGFloat = 0; var a: CGFloat = 0
         let success = getWhite(&w, alpha: &a)
         guard success else { throw ColorError.invalidColorSpace }
 
         return WhiteAlphaComponents(white: w, alpha: a)
+    }
+
+    // MARK: -
+
+    /// Returns the hexadecimal representation of an RGBA color, as a string,
+    /// **excluding** its `alpha` component.
+    ///
+    /// - Returns: the hexadecimal representation of `self`, as a string,
+    ///            **excluding** its `alpha` component.
+    ///
+    /// - Throws: `ColorError.invalidColorSpace` if somehow
+    ///           the RGBA components can't be extracted from `self` (this
+    ///           should never happen on iOS but...)
+    ///
+    /// - SeeAlso: hexValueWithAlpha()
+    public func hexValue() throws -> String
+    {
+        let rgba = try rgbaComponents()
+        return [rgba.red, rgba.green, rgba.blue]
+            .map { Int(255 * $0) }
+            .map { String(format:"%02X", $0) }
+            .reduce("", +)
+    }
+
+    /// Returns the hexadecimal representation of an RGBA color, as a string,
+    /// **including** its `alpha` component.
+    ///
+    /// - Returns: the hexadecimal representation of `self`, as a string,
+    ///            **including** its `alpha` component.
+    ///
+    /// - Throws: `ColorError.invalidColorSpace` if somehow
+    ///           the RGBA components can't be extracted from `self` (this
+    ///           should never happen on iOS but...)
+    ///
+    /// - SeeAlso: hexValue()
+    public func hexValueWithAlpha() throws -> String
+    {
+        let rgba = try rgbaComponents()
+        return [rgba.red, rgba.green, rgba.blue, rgba.alpha]
+            .map { Int(255 * $0) }
+            .map { String(format:"%02X", $0) }
+            .reduce("", +)
+    }
+
+    // MARK: -
+
+    /// Returns an approximate value for the **luminance** of an RGB color,
+    /// based on the quadratic expression:
+    ///
+    /// `L = 0.2126 * red * red + 0.7152 * green * green + 0.0722 * blue * blue`
+    ///
+    /// where `(red, green, blue)`, and `L` as well, are all in the range `[0, 1]`.
+    ///
+    /// See:
+    /// http://gamedev.stackexchange.com/questions/38536/given-a-rgb-color-x-how-to-find-the-most-contrasting-color-y
+    ///
+    /// - Parameters:
+    ///   - red:   the red   component of `self`, in the range [0,1].
+    ///   - green: the green component of `self`, in the range [0,1].
+    ///   - blue:  the blue  component of `self`, in the range [0,1].
+    ///
+    /// - Returns: an approximate value for the **luminance** of a color with the
+    ///            given RGB values.
+    ///
+    /// - Throws: `ColorError.invalidColorSpace` if somehow
+    ///           the RGBA components can't be extracted from `self` (this
+    ///           should never happen on iOS but...)
+    public static func quadraticLuma(red: CGFloat,
+                                     green: CGFloat,
+                                     blue: CGFloat) throws -> CGFloat
+    {
+        let rsq = red * red
+        let gsq = green * green
+        let bsq = blue * blue
+        return (0.2126 * rsq + 0.7152 * gsq + 0.0722 * bsq)
+    }
+
+    /// Returns an approximate value for the **luminance** of an RGB color,
+    /// based on the quadratic expression:
+    ///
+    /// `L = 0.2126 * red * red + 0.7152 * green * green + 0.0722 * blue * blue`
+    ///
+    /// where `(red, green, blue)`, and `L` as well, are all in the range `[0, 1]`.
+    ///
+    /// See:
+    /// http://gamedev.stackexchange.com/questions/38536/given-a-rgb-color-x-how-to-find-the-most-contrasting-color-y
+    ///
+    /// - Returns: an approximate value for the **luminance** of `self`.
+    ///
+    /// - Throws: `ColorError.invalidColorSpace` if somehow
+    ///           the RGBA components can't be extracted from `self` (this
+    ///           should never happen on iOS but...)
+    public func quadraticLuma() throws -> CGFloat
+    {
+        let rgba = try rgbaComponents()
+        return try UIColor.quadraticLuma(red: rgba.red,
+                                         green: rgba.green,
+                                         blue: rgba.blue)
+    }
+
+    // MARK: -
+
+    /// Returns a color that contrasts well with `self`.
+    ///
+    /// See:
+    /// http://gamedev.stackexchange.com/questions/38536/given-a-rgb-color-x-how-to-find-the-most-contrasting-color-y
+    ///
+    /// - Parameters:
+    ///
+    ///   - continuous: when `true`, the resulting color is some shade of gray ranging
+    ///                 from white to black; when `false`, the resulting color is either
+    ///                 white or black, depending on a luminance threshold. The default
+    ///                 behaviour is to result in a continuous shade of gray.
+    ///
+    ///   - threshold: ignored when `continuous` is set to `true`, otherwise used to
+    ///                decide whether the resulting color is white or black. The result
+    ///                is black when `self` has a luminance larger than this threshold,
+    ///                else the result if white. The default threshold value is 0.2.
+    ///
+    ///   - sameAlpha: when `true`, the resulting color has the same `alpha` component
+    ///                as `self`, otherwise it has `alpha` equal to 1. The default is
+    ///                `false` so the resulting color has `alpha` equal to 1.
+    ///
+    /// - Returns: a color that contrasts well with `self`.
+    ///
+    /// - Throws: `ColorError.invalidColorSpace` if somehow
+    ///           the RGBA components can't be extracted from `self` (this
+    ///           should never happen on iOS but...)
+    public func contrastingColor(continuous: Bool = true,
+                                 threshold: CGFloat = 0.2,
+                                 sameAlpha: Bool = false) throws -> UIColor
+    {
+        let rgba = try rgbaComponents()
+        let luma = try UIColor.quadraticLuma(red: rgba.red,
+                                             green: rgba.green,
+                                             blue: rgba.blue)
+        let a: CGFloat = (sameAlpha ? rgba.alpha : 1)
+        if continuous
+        { return UIColor(white: 1 - luma, alpha: a) }
+        else
+        {
+            return (luma > threshold ?
+                UIColor.black.withAlphaComponent(a) :
+                UIColor.white.withAlphaComponent(a))
+        }
     }
 
     // MARK: - Private API

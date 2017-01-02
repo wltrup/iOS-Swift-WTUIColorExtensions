@@ -19,9 +19,9 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
             .map { _ in
                 let components = try! UIColor.randomRGB.rgbaComponents()
                 return (components.red   >= 0 && components.red   <= 1 &&
-                        components.green >= 0 && components.green <= 1 &&
-                        components.blue  >= 0 && components.blue  <= 1 &&
-                        components.alpha == 1)
+                    components.green >= 0 && components.green <= 1 &&
+                    components.blue  >= 0 && components.blue  <= 1 &&
+                    components.alpha == 1)
             }
             .reduce(true) { $0 && $1 }
 
@@ -54,9 +54,9 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
             .map { _ in
                 let components = try! UIColor.randomRGBA.rgbaComponents()
                 return (components.red   >= 0 && components.red   <= 1 &&
-                        components.green >= 0 && components.green <= 1 &&
-                        components.blue  >= 0 && components.blue  <= 1 &&
-                        components.alpha >= 0 && components.alpha <= 1)
+                    components.green >= 0 && components.green <= 1 &&
+                    components.blue  >= 0 && components.blue  <= 1 &&
+                    components.alpha >= 0 && components.alpha <= 1)
             }
             .reduce(true) { $0 && $1 }
 
@@ -92,9 +92,9 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
             .map { _ in
                 let components = try! UIColor.randomHSB.hsbaComponents()
                 return (components.hue         >= 0 && components.hue         <= 1 &&
-                        components.saturation  >= 0 && components.saturation  <= 1 &&
-                        components.brightness  >= 0 && components.brightness  <= 1 &&
-                        components.alpha       == 1)
+                    components.saturation  >= 0 && components.saturation  <= 1 &&
+                    components.brightness  >= 0 && components.brightness  <= 1 &&
+                    components.alpha       == 1)
             }
             .reduce(true) { $0 && $1 }
 
@@ -127,9 +127,9 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
             .map { _ in
                 let components = try! UIColor.randomHSBA.hsbaComponents()
                 return (components.hue         >= 0 && components.hue         <= 1 &&
-                        components.saturation  >= 0 && components.saturation  <= 1 &&
-                        components.brightness  >= 0 && components.brightness  <= 1 &&
-                        components.alpha       >= 0 && components.alpha       <= 1)
+                    components.saturation  >= 0 && components.saturation  <= 1 &&
+                    components.brightness  >= 0 && components.brightness  <= 1 &&
+                    components.alpha       >= 0 && components.alpha       <= 1)
             }
             .reduce(true) { $0 && $1 }
 
@@ -165,7 +165,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
             .map { _ in
                 let components = try! UIColor.randomWhite.whiteAlphaComponents()
                 return (components.white >= 0 && components.white <= 1 &&
-                        components.alpha == 1)
+                    components.alpha == 1)
             }
             .reduce(true) { $0 && $1 }
 
@@ -191,7 +191,7 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
             .map { _ in
                 let components = try! UIColor.randomWhiteAlpha.whiteAlphaComponents()
                 return (components.white >= 0 && components.white <= 1 &&
-                        components.alpha >= 0 && components.alpha <= 1)
+                    components.alpha >= 0 && components.alpha <= 1)
             }
             .reduce(true) { $0 && $1 }
 
@@ -311,55 +311,165 @@ class WTUIColorExtensionsTests: WTUIColorExtensionsTestsBase
 
     // MARK: -
 
-    func test_whiteAlphaComponentsThrowsOnInvalidColorSpace1()
-    {
-        let color = UIColor(red: 0.1, green: 0.2, blue: 0.3, alpha: 0.4)
-        do {
-            _ = try color.whiteAlphaComponents()
-            XCTFail()
-        }
-        catch {
-            let expectedError = UIColor.ColorError.invalidColorSpace
-            let resultedError = error
-
-            XCTAssertTrue(resultedError is UIColor.ColorError)
-            if let resultedError = resultedError as? UIColor.ColorError
-            { XCTAssertEqual(resultedError, expectedError) }
-        }
-    }
-
-    func test_whiteAlphaComponentsThrowsOnInvalidColorSpace2()
-    {
-        let color = UIColor(hue: 0.1, saturation: 0.2, brightness: 0.3, alpha: 0.4)
-        do {
-            _ = try color.whiteAlphaComponents()
-            XCTFail()
-        }
-        catch {
-            let expectedError = UIColor.ColorError.invalidColorSpace
-            let resultedError = error
-
-            XCTAssertTrue(resultedError is UIColor.ColorError)
-            if let resultedError = resultedError as? UIColor.ColorError
-            { XCTAssertEqual(resultedError, expectedError) }
-        }
-    }
-
     func test_whiteAlphaComponents()
     {
         (1...N).forEach { _ in
             let w = random01(); let a = random01()
-            
+
             let color = UIColor(white: w, alpha: a)
             let comps = try! color.whiteAlphaComponents()
-            
+
             expectedValue = w
             resultedValue = comps.white
             assertAbsoluteDifferenceWithinTolerance()
-            
+
             expectedValue = a
             resultedValue = comps.alpha
             assertAbsoluteDifferenceWithinTolerance()
         }
     }
+
+    // MARK: -
+
+    fileprivate func hexDigit(_ n: Int) -> String
+    {
+        if n < 10 { return "\(n)" }
+        if n == 10 { return "A" }
+        if n == 11 { return "B" }
+        if n == 12 { return "C" }
+        if n == 13 { return "D" }
+        if n == 14 { return "E" }
+        if n == 15 { return "F" }
+        return ""
+    }
+
+    fileprivate func hexInteger(_ n: Int) -> String
+    {
+        guard n > 0 else { return "00" }
+
+        var a: [String] = []
+        var m = n
+        while m > 0 {
+            a = [hexDigit(m % 16)] + a
+            m /= 16
+        }
+
+        let p = (n > 15 ? "" : "0")
+        return p + a.reduce("", +)
+    }
+
+    func test_hexValueWithAlpha()
+    {
+        (1...N).forEach { _ in
+            let r = random01(); let rn = Int(255 * r); let rhex = hexInteger(rn)
+            let g = random01(); let gn = Int(255 * g); let ghex = hexInteger(gn)
+            let b = random01(); let bn = Int(255 * b); let bhex = hexInteger(bn)
+            let a = random01(); let an = Int(255 * a); let ahex = hexInteger(an)
+
+            let color = UIColor(red: r, green: g, blue: b, alpha: a)
+            let expectedValue = "\(rhex)\(ghex)\(bhex)\(ahex)"
+            let resultedValue = try! color.hexValueWithAlpha()
+
+            XCTAssertEqual(resultedValue, expectedValue)
+        }
+    }
+
+    func test_hexValue()
+    {
+        (1...N).forEach { _ in
+            let r = random01(); let rn = Int(255 * r); let rhex = hexInteger(rn)
+            let g = random01(); let gn = Int(255 * g); let ghex = hexInteger(gn)
+            let b = random01(); let bn = Int(255 * b); let bhex = hexInteger(bn)
+            let a = random01()
+
+            let color = UIColor(red: r, green: g, blue: b, alpha: a)
+            let expectedValue = "\(rhex)\(ghex)\(bhex)"
+            let resultedValue = try! color.hexValue()
+
+            XCTAssertEqual(resultedValue, expectedValue)
+        }
+    }
+
+    // MARK: -
+
+    func test_quadraticLuma_static()
+    {
+        (1...N).forEach { _ in
+            let r = random01(); let g = random01(); let b = random01()
+            let expectedValue = (0.2126 * r * r + 0.7152 * g * g + 0.0722 * b * b)
+            let resultedValue = try! UIColor.quadraticLuma(red: r, green: g, blue: b)
+
+            XCTAssertEqualWithAccuracy(resultedValue, expectedValue, accuracy: 1e-8)
+        }
+    }
+
+    func test_quadraticLuma()
+    {
+        (1...N).forEach { _ in
+            let r = random01(); let g = random01()
+            let b = random01(); let a = random01()
+            let color = UIColor(red: r, green: g, blue: b, alpha: a)
+            let expectedValue = (0.2126 * r * r + 0.7152 * g * g + 0.0722 * b * b)
+            let resultedValue = try! color.quadraticLuma()
+
+            XCTAssertEqualWithAccuracy(resultedValue, expectedValue, accuracy: 1e-8)
+        }
+    }
+
+    // MARK: -
+
+    func test_contrastingColor_1()
+    {
+        for continuous in [false, true] {
+            for sameAlpha in [false, true] {
+
+                let original = UIColor.black
+                let expected = UIColor.white
+                let resulted = try! original.contrastingColor(continuous: continuous,
+                                                              sameAlpha: sameAlpha)
+                XCTAssertEqual(resulted, expected)
+
+            }
+        }
+    }
+
+    func test_contrastingColor_2()
+    {
+        for continuous in [false, true] {
+            for sameAlpha in [false, true] {
+
+                let original = UIColor.white
+                let expected = UIColor.black
+                let resulted = try! original.contrastingColor(continuous: continuous,
+                                                              sameAlpha: sameAlpha)
+                XCTAssertEqual(resulted, expected)
+
+            }
+        }
+    }
+
+    func test_contrastingColor_3()
+    {
+        (1...N).forEach { _ in
+            let r = random01(); let g = random01()
+            let b = random01(); let a = random01()
+            let original = UIColor(red: r, green: g, blue: b, alpha: a)
+            
+            let luma = try! UIColor.quadraticLuma(red: r, green: g, blue: b)
+            
+            let expected: UIColor
+            if luma > 0.2 {
+                expected = UIColor.black.withAlphaComponent(a)
+            }
+            else {
+                expected = UIColor.white.withAlphaComponent(a)
+            }
+            let resulted = try! original.contrastingColor(continuous: false,
+                                                          sameAlpha: true)
+            
+            XCTAssertEqual(resulted, expected)
+        }
+    }
+    
 }
+
