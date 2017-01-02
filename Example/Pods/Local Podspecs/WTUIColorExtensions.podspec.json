@@ -1,6 +1,6 @@
 {
   "name": "WTUIColorExtensions",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "summary": "WTUIColorExtensions adds methods to generate pseudo-random colors, and more.",
   "description": "WTUIColorExtensions adds methods to generate pseudo-random colors, methods to\nextract the color components of a color instance in a more direct way than the\ndefault API does, methods to obtain the hexadecimal representation of an RGB color,\nmethods to obtain the color's luminance, and a method to obtain the most contrasting\ncolor to a given color.",
   "homepage": "https://github.com/wltrup/iOS-Swift-WTUIColorExtensions",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/wltrup/iOS-Swift-WTUIColorExtensions.git",
-    "tag": "1.1.0"
+    "tag": "1.1.1"
   },
   "platforms": {
     "ios": "8.0"

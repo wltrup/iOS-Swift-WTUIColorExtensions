@@ -1,5 +1,5 @@
 PODS:
-  - WTUIColorExtensions (1.1.0)
+  - WTUIColorExtensions (1.1.1)
 
 DEPENDENCIES:
   - WTUIColorExtensions (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WTUIColorExtensions: 58ef5fb5a5143b52fecd603f2b4d4cebaea2a961
+  WTUIColorExtensions: c4af18039cda0a9adcf17c59c9000caa16d1835e
 
 PODFILE CHECKSUM: 735cc16907814f7baacc313c637dac7ea2e2ab2f
 
