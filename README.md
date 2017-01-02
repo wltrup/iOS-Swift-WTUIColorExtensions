@@ -47,15 +47,15 @@ the default `get...` methods. Here's the full set of API additions:
     }
     public func whiteAlphaComponents() throws -> WhiteAlphaComponents
 
-    // NEW in v. 1.0.3
+    // NEW in v. 1.1.0
     public func hexValue() throws -> String
     public func hexValueWithAlpha() throws -> String
 
-    // NEW in v. 1.0.3
+    // NEW in v. 1.1.0
     public static func quadraticLuma(red: CGFloat, green: CGFloat, blue: CGFloat) throws -> CGFloat
     public func quadraticLuma() throws -> CGFloat
 
-    // NEW in v. 1.0.3
+    // NEW in v. 1.1.0
     public func contrastingColor(continuous: Bool, threshold: CGFloat, sameAlpha: Bool) throws -> UIColor
 }
 ```

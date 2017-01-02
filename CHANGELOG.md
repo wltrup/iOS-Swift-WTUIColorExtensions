@@ -1,5 +1,9 @@
 # WTUIColorExtensions
 
+## 1.1.1
+
+- No functional changes. Just fixes to the README file.
+
 ## 1.1.0
 
 - `whiteAlphaComponents()` no longer throws when the RBG components aren't equal to each other. 
