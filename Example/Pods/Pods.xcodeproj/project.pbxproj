@@ -27,19 +27,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06B610064981F8200C7C5189CDABCA28 /* Pods-WTUIColorExtensions_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WTUIColorExtensions_Tests.modulemap"; sourceTree = "<group>"; };
+		06B610064981F8200C7C5189CDABCA28 /* Pods-WTUIColorExtensions_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WTUIColorExtensions_Tests.modulemap"; sourceTree = "<group>"; };
 		297430B1C529D1E41EB6926361C92829 /* Pods-WTUIColorExtensions_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTUIColorExtensions_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2DFE3D36A97679221F65681F0FCDA54A /* Pods-WTUIColorExtensions_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTUIColorExtensions_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		463F17F3A402EB56768A074C48DED3B3 /* WTUIColorExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WTUIColorExtensions.swift; sourceTree = "<group>"; };
-		4CC6171D474161E2232132A7EB1D1132 /* WTUIColorExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WTUIColorExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC6171D474161E2232132A7EB1D1132 /* WTUIColorExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WTUIColorExtensions.framework; path = WTUIColorExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570B5F6A275F8D4E04E861A0544224B8 /* Pods-WTUIColorExtensions_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTUIColorExtensions_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5B0932FC7B8D856169025C1E28D8B13E /* Pods_WTUIColorExtensions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTUIColorExtensions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B0932FC7B8D856169025C1E28D8B13E /* Pods_WTUIColorExtensions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WTUIColorExtensions_Tests.framework; path = "Pods-WTUIColorExtensions_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2F68D774246EF81B579984DA2AADB5 /* WTUIColorExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTUIColorExtensions-umbrella.h"; sourceTree = "<group>"; };
 		65E69ABAA231F2222B42DFA136DF6D3A /* Pods-WTUIColorExtensions_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WTUIColorExtensions_Tests-resources.sh"; sourceTree = "<group>"; };
 		722964344E9BB7CA05FE19C9093B50A5 /* Pods-WTUIColorExtensions_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTUIColorExtensions_Tests-dummy.m"; sourceTree = "<group>"; };
 		73107EB40363AFBC711F10299A601CDF /* WTUIColorExtensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WTUIColorExtensions-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94F8F64FE3C74A3AFF8EF1B369F9BB50 /* WTUIColorExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WTUIColorExtensions.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94F8F64FE3C74A3AFF8EF1B369F9BB50 /* WTUIColorExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = WTUIColorExtensions.modulemap; sourceTree = "<group>"; };
 		A4A6215CDC1944C1D466C0ED83D1DBBE /* Pods-WTUIColorExtensions_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WTUIColorExtensions_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		A58F69BF98EFD9D21578024982B31D59 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBDF88097F85286EC0C6443A04B75EC1 /* Pods-WTUIColorExtensions_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTUIColorExtensions_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -75,6 +75,7 @@
 			children = (
 				4BDCEC7EF4BFBF058C7D4163BE974482 /* Classes */,
 			);
+			name = WTUIColorExtensions;
 			path = WTUIColorExtensions;
 			sourceTree = "<group>";
 		};
@@ -91,6 +92,7 @@
 			children = (
 				463F17F3A402EB56768A074C48DED3B3 /* WTUIColorExtensions.swift */,
 			);
+			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -245,14 +247,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					5B4943AC34DE53E2753E51AF880E8141 = {
-						LastSwiftMigration = 0810;
-					};
-					F0667B17DFA6B62CA5423FC98A15804E = {
-						LastSwiftMigration = 0810;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -332,7 +326,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -368,7 +361,6 @@
 				PRODUCT_NAME = Pods_WTUIColorExtensions_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
