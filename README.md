@@ -5,6 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/WTUIColorExtensions.svg?style=flat)](http://cocoapods.org/pods/WTUIColorExtensions)
 [![Platform](https://img.shields.io/cocoapods/p/WTUIColorExtensions.svg?style=flat)](http://cocoapods.org/pods/WTUIColorExtensions)
 
+## IMPORTANT
+2020.02.21: This project has been **deprecated** and is replaced by [ColorExtensions](https://github.com/wltrup/ColorExtensions).
+
 ## What
 
 **WTUIColorExtensions** adds to `UIColor` the ability to generate pseudo-random color instances
